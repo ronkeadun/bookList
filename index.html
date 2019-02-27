@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv = "X-UA-Compatible" content="ie-edge">
+	<title>MyBookList App</title>
+	<style type="text/css">
+		body{
+			border: 3px black solid;
+			text-align: center;
+		}
+		span{
+			color: blue;
+		}
+		#container{
+			border: 1px black solid;
+			margin: auto;
+			width: 50%;
+		}
+		table{
+			padding: 10px;
+			border-collapse: collapse;
+			margin: 10px auto;
+		}
+		thead{
+			/*border: 3px black solid;*/
+		}
+		td{
+			padding: 10px;
+		}
+		th{
+			padding: 10px;
+		}
+		.alert-color, .alert-successColor{
+			background: red;
+			margin: 10px auto;
+			width: 50%;
+			padding: 5px;
+			color:white;
+			font-size: 1.2rem;
+		}
+		.alert-successColor{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>My<span>Book</span>List</h1>
+		<form id="book-form">
+			<div class="form-group">
+				<label for="title">Title</label><br>
+				<input type="text" id="title" class="form-group">
+			</div>
+			<div class="form-group">
+				<label for="author">Author</label><br>
+				<input type="text" id="author" class="form-group">
+			</div>
+			<div class="form-group">
+				<label for="isbn">ISBN</label><br>
+				<input type="text" id="isbn" class="form-group">
+			</div> <br>
+
+			<input type="submit" value="Add Book">
+		</form>
+		<br><br>
+		<table class="table" border='1'>
+			<thead>
+				<th>Title</th>
+				<th>Author</th>
+				<th>ISBN</th>
+				<th></th>
+			</thead>
+			<tbody id="book-list">
+				<tr id='row'></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
